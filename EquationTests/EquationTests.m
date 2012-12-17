@@ -134,7 +134,7 @@ Equation* e;
 
 
 
-                /* 課題　*/
+                /* 課題２*/
 // x^2 - 5x - 14 = 0 をテスト
 // 実数解 2つの場合。
 - (void)test5
@@ -177,6 +177,29 @@ Equation* e;
     STAssertEqualsWithAccuracy(4.0, [e imaginary1], 0.00001, @"imaginary1 error");
     STAssertEqualsWithAccuracy(-4.0, [e imaginary2], 0.00001, @"imaginary2 error");
 }
+
+
+
+
+
+
+
+                                        /*課題３*/
+
+// x^2 + (2+2i)x + 4i = 0 をテスト
+// 虚数解 2つの場合。
+- (void)test8
+{
+    e = [[Equation alloc] initWithA:1 b:2+2i c:4i];
+    
+    STAssertEqualsWithAccuracy(-2.0, [e real1], 0.00001, @"real1 error");
+    STAssertEqualsWithAccuracy(0.0, [e real2], 0.00001, @"real2 error");
+    STAssertEqualsWithAccuracy(0.0, [e imaginary1], 0.00001, @"imaginary1 error");
+    STAssertEqualsWithAccuracy(-2.0, [e imaginary2], 0.00001, @"imaginary2 error");
+}
+
+
+
 
 
 @end
