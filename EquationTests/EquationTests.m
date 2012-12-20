@@ -189,6 +189,7 @@ Equation* e;
 {
     e = [[Equation alloc] initWithA:1 b:2+2i c:4i];
     
+    
     STAssertEqualsWithAccuracy(-2.0, [e real1], 0.00001, @"real1 error");
     STAssertEqualsWithAccuracy(0.0, [e real2], 0.00001, @"real2 error");
     STAssertEqualsWithAccuracy(0.0, [e imaginary1], 0.00001, @"imaginary1 error");
